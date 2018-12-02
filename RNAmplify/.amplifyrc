@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "mplify-20181202101027-authRole",
+            "UnauthRoleArn": "arn:aws:iam::339233669509:role/mplify-20181202101027-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::339233669509:role/mplify-20181202101027-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "mplify-20181202101027-deployment",
+            "UnauthRoleName": "mplify-20181202101027-unauthRole",
+            "StackName": "mplify-20181202101027",
+            "StackId": "arn:aws:cloudformation:us-west-2:339233669509:stack/mplify-20181202101027/8c4c6b50-f65d-11e8-bf8c-02a5b7e2d79e"
+        }
+    }
+}

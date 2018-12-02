@@ -1,0 +1,20 @@
+{
+    "projectName": "RNAmplify",
+    "projectPath": "/nfs/2016/d/dstolz/RNAmplify",
+    "defaultEditor": "code",
+    "frontendHandler": {
+        "javascript": "/nfs/2016/d/dstolz/.brew/lib/node_modules/@aws-amplify/cli/node_modules/amplify-frontend-javascript"
+    },
+    "javascript": {
+        "framework": "react-native",
+        "config": {
+            "SourceDir": "/",
+            "DistributionDir": "/",
+            "BuildCommand": "npm run-script build",
+            "StartCommand": "npm run-script start"
+        }
+    },
+    "providers": {
+        "awscloudformation": "/nfs/2016/d/dstolz/.brew/lib/node_modules/@aws-amplify/cli/node_modules/amplify-provider-awscloudformation"
+    }
+}

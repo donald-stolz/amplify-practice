@@ -1,0 +1,52 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "mplify-20181202101027-authRole",
+			"UnauthRoleArn": "arn:aws:iam::339233669509:role/mplify-20181202101027-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::339233669509:role/mplify-20181202101027-authRole",
+			"Region": "us-west-2",
+			"DeploymentBucketName": "mplify-20181202101027-deployment",
+			"UnauthRoleName": "mplify-20181202101027-unauthRole",
+			"StackName": "mplify-20181202101027",
+			"StackId": "arn:aws:cloudformation:us-west-2:339233669509:stack/mplify-20181202101027/8c4c6b50-f65d-11e8-bf8c-02a5b7e2d79e"
+		}
+	},
+	"auth": {
+		"cognitoc58f2c17": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/mplify-20181202101027-deployment/amplify-cfn-templates/auth/cognitoc58f2c17-cloudformation-template.yml",
+				"logicalId": "authcognitoc58f2c17"
+			},
+			"lastPushTimeStamp": "2018-12-02T18:30:25.095Z",
+			"output": {
+				"AppClientSecret": "g0tgm7sfu0rtig0nqpd1kl8o2ao9qb438v77tpigaorkvsov669",
+				"UserPoolId": "us-west-2_8aeKdfDgJ",
+				"AppClientIDWeb": "5uhd9b80cudtj65mahngf38r0h",
+				"AppClientID": "35i81h176pd6uasr35spt8fdl5",
+				"IdentityPoolId": "us-west-2:ef88d852-269c-4766-a357-f76b6689c87f",
+				"IdentityPoolName": "cognitoc58f2c17_identitypool_c58f2c17",
+				"UserPoolName": "cognitoc58f2c17_userpool_c58f2c17"
+			},
+			"lastPushDirHash": "cs72bGScaetccB8EJw+4FBa5/uM="
+		}
+	},
+	"analytics": {
+		"rnamplify": {
+			"service": "Pinpoint",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/mplify-20181202101027-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+				"logicalId": "analyticsrnamplify"
+			},
+			"lastPushTimeStamp": "2018-12-02T18:30:25.095Z",
+			"output": {
+				"appName": "rnamplify",
+				"Region": "us-east-1",
+				"Id": "e973ff660e044e39a3cdecb2eda71ca7"
+			},
+			"lastPushDirHash": "OOZtvRj2pK2ypL/ZsZi6v6g/EOk="
+		}
+	}
+}
