@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { TextInput, Button, StyleSheet, Text, View } from 'react-native';
 
-export default class App extends Component {
-    constructor() {
+import { Auth } from 'aws-amplify';
+
+export default class Signup extends Component {
+    constructor(props) {
+        super(props);
         this.state = {
             username: '',
             password: '',
@@ -10,6 +13,9 @@ export default class App extends Component {
             email: '',
             confirmationCode: '',
         };
+        this.onChangeText = this.onChangeText.bind(this);
+        this.signUp = this.signUp.bind(this);
+        this.confirmSignUp = this.confirmSignUp.bind(this);
     }
 
     onChangeText(key, value) {
@@ -63,7 +69,7 @@ export default class App extends Component {
                     style={styles.input}
                     placeholder="email"
                 />
-                <Button title="Sign Up" onPress={this.signUp.bind(this)} />
+                <Button title="Sign Up" onPress={this.signUp} />
                 <TextInput
                     onChangeText={value =>
                         this.onChangeText('confirmationCode', value)
@@ -71,10 +77,7 @@ export default class App extends Component {
                     style={styles.input}
                     placeholder="confirmation Code"
                 />
-                <Button
-                    title="Confirm Sign Up"
-                    onPress={this.confirmSignUp.bind(this)}
-                />
+                <Button title="Confirm Sign Up" onPress={this.confirmSignUp} />
             </View>
         );
     }

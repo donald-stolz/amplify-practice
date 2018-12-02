@@ -3,14 +3,18 @@ import { TextInput, Button, StyleSheet, Text, View } from 'react-native';
 
 import { Auth } from 'aws-amplify';
 
-export default class App extends Component {
-    constructor() {
+export default class SignIn extends Component {
+    constructor(props) {
+        super(props);
         this.state = {
             username: '',
             password: '',
             confirmationCode: '',
             user: {},
         };
+        this.onChangeText = this.onChangeText.bind(this);
+        this.signIn = this.signIn.bind(this);
+        this.confirmSignIn = this.confirmSignIn.bind(this);
     }
 
     onChangeText(key, value) {

@@ -1,11 +1,11 @@
-import { TabNavigator } from 'react-navigation';
+import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
 
 import SignIn from '../screens/SignIn';
 import SignUp from '../screens/SignUp';
 
-const Tabs = TabNavigator({
+const Tabs = createBottomTabNavigator({
     SignIn: { screen: SignIn },
     SignUp: { screen: SignUp },
 });
 
-export default Tabs;
+export default createAppContainer(Tabs);

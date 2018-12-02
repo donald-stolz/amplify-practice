@@ -8,10 +8,12 @@ Amplify.configure(AWSConfig);
 import Tabs from './routes/Tabs';
 
 export default class App extends Component {
-    constructor() {
+    constructor(props) {
+        super(props);
         this.state = {
             isAuthenticated: false,
         };
+        this.authenticate = this.authenticate.bind(this);
     }
 
     authenticate(isAuthenticated) {
