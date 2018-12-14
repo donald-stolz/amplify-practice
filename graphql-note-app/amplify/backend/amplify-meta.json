@@ -1,0 +1,39 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "graphqlnoteapp-20181214102557-authRole",
+            "UnauthRoleArn": "arn:aws:iam::339233669509:role/graphqlnoteapp-20181214102557-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::339233669509:role/graphqlnoteapp-20181214102557-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "graphqlnoteapp-20181214102557-deployment",
+            "UnauthRoleName": "graphqlnoteapp-20181214102557-unauthRole",
+            "StackName": "graphqlnoteapp-20181214102557",
+            "StackId": "arn:aws:cloudformation:us-west-2:339233669509:stack/graphqlnoteapp-20181214102557/b323da50-ffcd-11e8-a2a7-064c426727f4"
+        }
+    },
+    "auth": {
+        "cognitod6a3d785": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/graphqlnoteapp-20181214102557-deployment/amplify-cfn-templates/auth/cognitod6a3d785-cloudformation-template.yml",
+                "logicalId": "authcognitod6a3d785"
+            },
+            "lastPushTimeStamp": "2018-12-14T18:39:31.192Z"
+        }
+    },
+    "api": {
+        "graphqlnoteapp": {
+            "service": "AppSync",
+            "providerPlugin": "awscloudformation",
+            "output": {
+                "securityType": "AMAZON_COGNITO_USER_POOLS"
+            },
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/graphqlnoteapp-20181214102557-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+                "logicalId": "apigraphqlnoteapp"
+            },
+            "lastPushTimeStamp": "2018-12-14T18:39:31.181Z"
+        }
+    }
+}

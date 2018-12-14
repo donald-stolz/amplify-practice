@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "graphqlnoteapp",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcognitod6a3d785",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "schemaGraphql": "s3://graphqlnoteapp-20181214102557-deployment/amplify-appsync-files/schema.graphql.1544812747068",
+    "ResolverBucket": "graphqlnoteapp-20181214102557-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1544812747068"
+}

@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "graphqlnoteapp-20181214102557-authRole",
+            "UnauthRoleArn": "arn:aws:iam::339233669509:role/graphqlnoteapp-20181214102557-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::339233669509:role/graphqlnoteapp-20181214102557-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "graphqlnoteapp-20181214102557-deployment",
+            "UnauthRoleName": "graphqlnoteapp-20181214102557-unauthRole",
+            "StackName": "graphqlnoteapp-20181214102557",
+            "StackId": "arn:aws:cloudformation:us-west-2:339233669509:stack/graphqlnoteapp-20181214102557/b323da50-ffcd-11e8-a2a7-064c426727f4"
+        }
+    }
+}
