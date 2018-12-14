@@ -19,7 +19,17 @@
                 "s3TemplateURL": "https://s3.amazonaws.com/graphqlnoteapp-20181214102557-deployment/amplify-cfn-templates/auth/cognitod6a3d785-cloudformation-template.yml",
                 "logicalId": "authcognitod6a3d785"
             },
-            "lastPushTimeStamp": "2018-12-14T18:39:31.192Z"
+            "lastPushTimeStamp": "2018-12-14T19:55:11.457Z",
+            "output": {
+                "AppClientSecret": "m6u38etlm4chjnkotd0rdgg2llrfl81er3tsna83et2ehi29isg",
+                "UserPoolId": "us-west-2_Oz0TBdumO",
+                "AppClientIDWeb": "26is2tdmu2m3c4v3i6cs4dnngf",
+                "AppClientID": "7ji4s8vauf91el3ojblm94q2pr",
+                "IdentityPoolId": "us-west-2:7fb92488-f8e3-4c20-a544-0f79a7c17688",
+                "IdentityPoolName": "cognitod6a3d785_identitypool_d6a3d785",
+                "UserPoolName": "cognitod6a3d785_userpool_d6a3d785"
+            },
+            "lastPushDirHash": "UvMIpA36maWgkeGzRHu6fHClYzE="
         }
     },
     "api": {
@@ -27,13 +37,20 @@
             "service": "AppSync",
             "providerPlugin": "awscloudformation",
             "output": {
-                "securityType": "AMAZON_COGNITO_USER_POOLS"
+                "securityType": "AMAZON_COGNITO_USER_POOLS",
+                "GraphQLAPIIdOutput": "xc225jgl7jaqzk366jq3qpefoy",
+                "GraphQLAPIEndpointOutput": "https://znl6bes7jbc5jimckchites5de.appsync-api.us-west-2.amazonaws.com/graphql",
+                "GraphQLAPIKeyOutput": "da2-kpk5bmdeqzf4rcykvjayvqg27u",
+                "AuthCognitoUserPoolIdOutput": "us-west-2_Oz0TBdumO",
+                "AuthCognitoUserPoolNativeClientId": "See UserPool: us-west-2_Oz0TBdumO",
+                "AuthCognitoUserPoolJSClientId": "See UserPool: us-west-2_Oz0TBdumO"
             },
             "providerMetadata": {
                 "s3TemplateURL": "https://s3.amazonaws.com/graphqlnoteapp-20181214102557-deployment/amplify-cfn-templates/api/cloudformation-template.json",
                 "logicalId": "apigraphqlnoteapp"
             },
-            "lastPushTimeStamp": "2018-12-14T18:39:31.181Z"
+            "lastPushTimeStamp": "2018-12-14T19:55:11.459Z",
+            "lastPushDirHash": "j5/xY7Xmhu19ZA2phUKzNNYglKA="
         }
     }
 }
