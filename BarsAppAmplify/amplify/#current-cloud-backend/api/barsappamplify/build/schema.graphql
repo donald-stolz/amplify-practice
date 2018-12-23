@@ -1,0 +1,242 @@
+type Bar {
+  id: ID!
+  createdAt: String
+  updatedAt: String
+  name: String!
+  phone: String
+  location: String
+  lat: String
+  lng: String
+  url: AWSURL
+  addedBy: ID!
+  users(first: Int, after: String): [Bar]
+}
+
+type BarMember {
+  id: ID!
+  createdAt: String
+  updatedAt: String
+  userId: ID!
+  barId: ID!
+}
+
+type User {
+  id: ID!
+  createdAt: String
+  updatedAt: String
+  username: String!
+  bars(first: Int, after: String): [Bar]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelBarConnection {
+  items: [Bar]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelBarFilterInput {
+  id: ModelIDFilterInput
+  createdAt: ModelStringFilterInput
+  updatedAt: ModelStringFilterInput
+  name: ModelStringFilterInput
+  phone: ModelStringFilterInput
+  location: ModelStringFilterInput
+  lat: ModelStringFilterInput
+  lng: ModelStringFilterInput
+  url: ModelStringFilterInput
+  addedBy: ModelIDFilterInput
+  and: [ModelBarFilterInput]
+  or: [ModelBarFilterInput]
+  not: ModelBarFilterInput
+}
+
+type Query {
+  getBar(id: ID!): Bar
+  listBars(filter: ModelBarFilterInput, limit: Int, nextToken: String): ModelBarConnection
+  getBarMember(id: ID!): BarMember
+  listBarMembers(filter: ModelBarMemberFilterInput, limit: Int, nextToken: String): ModelBarMemberConnection
+  getUser(id: ID!): User
+  listUsers(filter: ModelUserFilterInput, limit: Int, nextToken: String): ModelUserConnection
+}
+
+input CreateBarInput {
+  id: ID
+  createdAt: String
+  updatedAt: String
+  name: String!
+  phone: String
+  location: String
+  lat: String
+  lng: String
+  url: AWSURL
+  addedBy: ID!
+}
+
+input UpdateBarInput {
+  id: ID!
+  createdAt: String
+  updatedAt: String
+  name: String
+  phone: String
+  location: String
+  lat: String
+  lng: String
+  url: AWSURL
+  addedBy: ID
+}
+
+input DeleteBarInput {
+  id: ID
+}
+
+type Mutation {
+  createBar(input: CreateBarInput!): Bar
+  updateBar(input: UpdateBarInput!): Bar
+  deleteBar(input: DeleteBarInput!): Bar
+  createBarMember(input: CreateBarMemberInput!): BarMember
+  updateBarMember(input: UpdateBarMemberInput!): BarMember
+  deleteBarMember(input: DeleteBarMemberInput!): BarMember
+  createUser(input: CreateUserInput!): User
+  updateUser(input: UpdateUserInput!): User
+  deleteUser(input: DeleteUserInput!): User
+}
+
+type Subscription {
+  onCreateBar: Bar @aws_subscribe(mutations: ["createBar"])
+  onUpdateBar: Bar @aws_subscribe(mutations: ["updateBar"])
+  onDeleteBar: Bar @aws_subscribe(mutations: ["deleteBar"])
+  onCreateBarMember: BarMember @aws_subscribe(mutations: ["createBarMember"])
+  onUpdateBarMember: BarMember @aws_subscribe(mutations: ["updateBarMember"])
+  onDeleteBarMember: BarMember @aws_subscribe(mutations: ["deleteBarMember"])
+  onCreateUser: User @aws_subscribe(mutations: ["createUser"])
+  onUpdateUser: User @aws_subscribe(mutations: ["updateUser"])
+  onDeleteUser: User @aws_subscribe(mutations: ["deleteUser"])
+}
+
+type ModelBarMemberConnection {
+  items: [BarMember]
+  nextToken: String
+}
+
+input ModelBarMemberFilterInput {
+  id: ModelIDFilterInput
+  createdAt: ModelStringFilterInput
+  updatedAt: ModelStringFilterInput
+  userId: ModelIDFilterInput
+  barId: ModelIDFilterInput
+  and: [ModelBarMemberFilterInput]
+  or: [ModelBarMemberFilterInput]
+  not: ModelBarMemberFilterInput
+}
+
+input CreateBarMemberInput {
+  id: ID
+  createdAt: String
+  updatedAt: String
+  userId: ID!
+  barId: ID!
+}
+
+input UpdateBarMemberInput {
+  id: ID!
+  createdAt: String
+  updatedAt: String
+  userId: ID
+  barId: ID
+}
+
+input DeleteBarMemberInput {
+  id: ID
+}
+
+type ModelUserConnection {
+  items: [User]
+  nextToken: String
+}
+
+input ModelUserFilterInput {
+  id: ModelIDFilterInput
+  createdAt: ModelStringFilterInput
+  updatedAt: ModelStringFilterInput
+  username: ModelStringFilterInput
+  and: [ModelUserFilterInput]
+  or: [ModelUserFilterInput]
+  not: ModelUserFilterInput
+}
+
+input CreateUserInput {
+  id: ID
+  createdAt: String
+  updatedAt: String
+  username: String!
+}
+
+input UpdateUserInput {
+  id: ID!
+  createdAt: String
+  updatedAt: String
+  username: String
+}
+
+input DeleteUserInput {
+  id: ID
+}

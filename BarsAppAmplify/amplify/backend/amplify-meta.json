@@ -1,0 +1,56 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "arsppmplify-20181222163642-authRole",
+			"UnauthRoleArn": "arn:aws:iam::339233669509:role/arsppmplify-20181222163642-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::339233669509:role/arsppmplify-20181222163642-authRole",
+			"Region": "us-west-2",
+			"DeploymentBucketName": "arsppmplify-20181222163642-deployment",
+			"UnauthRoleName": "arsppmplify-20181222163642-unauthRole",
+			"StackName": "arsppmplify-20181222163642",
+			"StackId": "arn:aws:cloudformation:us-west-2:339233669509:stack/arsppmplify-20181222163642/d1fce830-064a-11e9-85cc-500c32c86cd1"
+		}
+	},
+	"auth": {
+		"cognito42d74afc": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/arsppmplify-20181222163642-deployment/amplify-cfn-templates/auth/cognito42d74afc-cloudformation-template.yml",
+				"logicalId": "authcognito42d74afc"
+			},
+			"lastPushTimeStamp": "2018-12-23T00:52:22.959Z",
+			"output": {
+				"AppClientSecret": "v1ir74sr9g91ue242ql5gbcbvsif5bgkansoft8nkgd4efpd1lh",
+				"UserPoolId": "us-west-2_SVfHB98Ij",
+				"AppClientIDWeb": "6qndrq2b85vitsebj6hlv43vse",
+				"AppClientID": "2095kvc16b8luj0g7faa1j3vf0",
+				"IdentityPoolId": "us-west-2:ebe64176-8569-4b81-ba21-aac196869070",
+				"IdentityPoolName": "barsappamplify42d74afc_identitypool_42d74afc",
+				"UserPoolName": "barsappamplify42d74afc_userpool_42d74afc"
+			},
+			"lastPushDirHash": "+SOb7qxqLZVdj7QmQTYvMYPgDjA="
+		}
+	},
+	"api": {
+		"barsappamplify": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "AMAZON_COGNITO_USER_POOLS",
+				"GraphQLAPIIdOutput": "ejahiwpdcnebbjqobflaocefd4",
+				"GraphQLAPIEndpointOutput": "https://sjbhlgntrbbxforo5ud7xiey44.appsync-api.us-west-2.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-o2tx5fb2tvaubbbxmnkaiacpb4",
+				"AuthCognitoUserPoolIdOutput": "us-west-2_SVfHB98Ij",
+				"AuthCognitoUserPoolNativeClientId": "See UserPool: us-west-2_SVfHB98Ij",
+				"AuthCognitoUserPoolJSClientId": "See UserPool: us-west-2_SVfHB98Ij"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/arsppmplify-20181222163642-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apibarsappamplify"
+			},
+			"lastPushTimeStamp": "2018-12-23T00:52:22.959Z",
+			"lastPushDirHash": "eCg9XyI38z7MUbLgvpOp3hB2Acw="
+		}
+	}
+}
